@@ -1,0 +1,490 @@
+20230513	12:45:21	53891620-d267-47cc-b9a2-69f5bf3ca8b1	Error: not allowed by CORS
+20230513	13:54:18	424f1e57-8a9c-4e0d-8969-559b64ef8697	SyntaxError: Unexpected token : in JSON at position 34
+20230514	08:06:46	d3ce3c86-f2cb-4e9e-8867-ce96f8c5067b	SyntaxError: Unexpected token e in JSON at position 0
+20230514	12:35:28	8d5f6bc7-65b9-4b3d-ba22-e8cbf45899a1	ReferenceError: whitelist is not defined
+20230518	11:09:45	9e70e453-113a-4bc1-aa51-ee12f8d6b0aa	SyntaxError: Unexpected token n in JSON at position 1
+20230518	11:09:59	275e8dc6-02d9-45d5-829c-d4231a526fe5	SyntaxError: Unexpected token n in JSON at position 1
+20230518	11:10:10	416b19d0-e67f-4bdb-958e-1c402a6e4249	SyntaxError: Unexpected token n in JSON at position 1
+20230518	11:13:17	15350cb5-94df-4bf7-b231-3cbeec815581	SyntaxError: Unexpected token n in JSON at position 1
+20230518	11:13:42	3fbec5f4-6f92-439c-a217-fef6821cb802	SyntaxError: Unexpected token n in JSON at position 1
+20230518	11:14:12	14e62b18-3e88-43a7-b8d4-0d23a724ddce	SyntaxError: Unexpected token n in JSON at position 1
+20230620	11:19:59	0e34bd4f-110e-413d-8e09-99b45c810e6f	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:20:25	5b581316-5198-43a5-8e8e-9c12a35e9750	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:20:26	c295bf60-0860-40b7-89d7-d1cf42a0f60d	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:21:06	6ee0e979-629f-4313-8b44-c500451ec0a3	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:22:38	cf3f23b5-9607-45b0-9b7e-445aff3cf59f	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:22:48	e4481204-d15a-4dcd-ab0e-029adf0461da	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:23:44	0859de7e-da14-4afd-931a-9e4a1c402ca0	CastError: Cast to ObjectId failed for value ":64916fb45d2ce6b54a9f1fe5" (type string) at path "_id" for model "Book"
+20230620	11:24:32	08e579cd-02ab-44c2-9a34-c82a8949dba6	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:24:40	1e40fd05-83b4-4b2d-8c3e-0218081118cd	CastError: Cast to ObjectId failed for value ":64916fb45d2ce6b54a9f1fe5" (type string) at path "_id" for model "Book"
+20230620	11:24:54	3d6c1503-7499-4cd6-b797-b6c45ce101e0	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:25:16	966d7b17-7431-4ac6-a9fa-3d21a9f3c14c	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:25:40	221b2d15-1ee1-4a8b-8fd9-814fd67cc429	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:27:14	d5cbab54-e17a-4b40-b8ed-352405967926	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:27:33	c02f2c32-959e-4c9d-ab6c-b98906451749	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:27:41	5cf8d991-871a-4628-a246-3f13fa6a5494	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:28:02	8bdc04dd-8aad-473b-9610-77a62524f7fd	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:28:17	31515c03-2184-4732-af77-d013bbfef226	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:28:18	eb8036d6-c083-4366-b24d-0a5c532b25a0	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:28:26	745f2b88-477f-41c4-8131-4c5131077612	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:32:02	8cb58606-64e1-46b8-8ac1-2edb538e9ccf	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:33:04	d7d4260b-5563-41bb-b2aa-f05a0716d055	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:33:05	8a02f774-4f97-4437-9cb2-2c541fe8b860	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:33:20	01b2827e-4bc6-4767-86f9-c73d320a417a	CastError: Cast to ObjectId failed for value ":6491722c6d0ce916a6a2a211" (type string) at path "_id" for model "Book"
+20230620	11:33:47	30c627c9-c231-401f-8da5-751311e93e1a	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:35:32	3693457a-fa01-4516-ada7-6f6f6c8e11d1	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:35:34	1e75122a-c254-4e32-99e3-3070ac09be31	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:35:39	311376cf-6ab7-4a70-a799-814fe8c9a836	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:35:40	bae7e685-3c8a-4d94-8cd1-d8b8275c3619	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:35:48	d2ad9b4d-ae06-45d1-84a2-5ea891685f54	CastError: Cast to ObjectId failed for value ":6491722c6d0ce916a6a2a211" (type string) at path "_id" for model "Book"
+20230620	11:35:55	c7b97cce-d3cf-4cfe-bd4f-55d87a2cb428	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:36:11	e4520e46-1a64-45c5-8625-7c7506aac7be	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:36:17	9102bca8-8466-47de-98a3-62e68b46306b	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:46:34	f358787e-4676-463c-9c10-975e0afe9367	CastError: Cast to ObjectId failed for value "{ id: '6491722c6d0ce916a6a2a211' }" (type Object) at path "_id" for model "Book"
+20230620	11:47:07	c959269c-1b9b-4e65-bfc8-0aeb9b9352c5	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:47:16	6abefbbe-c79a-4280-940f-280ebb83cb12	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:47:22	3d4565f6-ae76-4a69-b713-33acab05bee1	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:47:23	aba7699a-b848-4641-a9ff-5d103b149c87	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:48:03	b118ead8-e6bf-4dd4-9617-37c999fe2c00	CastError: Cast to ObjectId failed for value "{ id: ':6491722c6d0ce916a6a2a211' }" (type Object) at path "_id" for model "Book"
+20230620	11:48:45	4b72c003-65b2-4d2e-abc6-1615be5e2541	CastError: Cast to ObjectId failed for value "{ id: ':6491722c6d0ce916a6a2a211' }" (type Object) at path "_id" for model "Book"
+20230620	11:48:53	4cdafea9-bc37-45df-b289-b75adb6ce723	CastError: Cast to ObjectId failed for value "{ id: ':6491722c6d0ce916a6a2a211' }" (type Object) at path "_id" for model "Book"
+20230620	11:48:55	1d51b6d2-0256-4b40-b1b3-42986476cf63	CastError: Cast to ObjectId failed for value "{ id: ':6491722c6d0ce916a6a2a211' }" (type Object) at path "_id" for model "Book"
+20230620	11:49:08	7254a3ca-82b0-4fb5-ad33-c7d71b324ecb	CastError: Cast to ObjectId failed for value "{ id: ':6491722c6d0ce916a6a2a211' }" (type Object) at path "_id" for model "Book"
+20230620	11:49:14	4db7b36a-597f-4e82-aa04-474ef208434b	CastError: Cast to ObjectId failed for value "{ id: '6491722c6d0ce916a6a2a211' }" (type Object) at path "_id" for model "Book"
+20230620	11:49:37	9b7329ec-d8ab-4527-bb3c-2636e0d656a6	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:50:04	3399a88f-22a6-4d8f-8112-386007f9dcf0	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:50:12	d6c04c75-873a-4829-a09c-a59adb53ca29	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:50:17	7fe83a55-ad98-4f84-b586-d24d8d2138e3	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:52:07	fa642cc2-bbf7-4ee9-9109-8d52487dd4f1	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:55:32	94791159-77e9-44b8-9ea2-53e4a3218aac	CastError: Cast to ObjectId failed for value "id:6491722c6d0ce916a6a2a211" (type string) at path "_id" for model "Book"
+20230620	11:55:41	bc69cf8c-b6e5-4563-9d24-4ff77e59972a	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:56:59	0b446b3b-64b8-4c0a-afc1-bb015387b5e8	CastError: Cast to ObjectId failed for value "{ bookId: '6491722c6d0ce916a6a2a211' }" (type Object) at path "_id" for model "Book"
+20230620	11:57:39	beaa0b0e-7ceb-485c-9978-e89b1b58c049	CastError: Cast to ObjectId failed for value "{ id: '6491722c6d0ce916a6a2a211' }" (type Object) at path "_id" for model "Book"
+20230620	11:58:00	0702f82b-c910-4c3c-86e4-d2c98adf2b64	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:58:25	4b5ef9f7-64da-44ea-898e-b78e81272a4f	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:59:06	18a44eea-408d-4755-9ce9-40b202d25a80	CastError: Cast to ObjectId failed for value "{ id: '6491722c6d0ce916a6a2a211' }" (type Object) at path "_id" for model "Book"
+20230620	11:59:24	671760ef-229f-4dbe-9601-ea5c8b453a8c	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	11:59:45	db7c84ea-f759-4046-971a-f290391ce1c8	CastError: Cast to ObjectId failed for value "{ id: '6491722c6d0ce916a6a2a211' }" (type Object) at path "_id" for model "Book"
+20230620	12:00:06	0463ac3f-6264-4ce8-8895-2062b4b97dfa	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:00:07	565c6606-8798-4e6c-948e-ee701b0fe975	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:00:29	57cf1184-4e6d-46ac-9df2-a666266f6915	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:02:26	25916359-5689-4ace-9ea0-3debf5aeec65	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:03:03	aa5fa7b0-4bcc-441a-b71c-16ea63a62d84	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:03:06	83db3c96-36a1-414e-b982-f66aaf1649cd	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:03:08	8fb91138-c52d-482a-9d61-c035281c4a5e	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:04:16	b9a89851-b52a-40aa-bc6b-555754db1c5a	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:04:29	35b38b55-2d7d-4fbe-86eb-48a8f9f8ffff	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:04:37	54afdab5-2a0b-4f19-9c81-5c91d9b901be	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:04:54	f41c6c4c-27e0-4988-8354-57b7e57f1ef2	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:04:58	5d29037c-2d31-41c6-bcb6-35ccac4d34a4	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:05:00	37633b9f-126c-4bc6-8649-5ad6280f1db0	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:05:13	935a0a37-b60d-4b6f-949f-94e293709fbb	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:06:01	00f5fe00-996b-4d73-8785-93f6e05acad3	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:06:27	0c893486-48ff-4ab0-a784-ad78851f5eb1	CastError: Cast to ObjectId failed for value "{ id: '649179e9a3bf4ce59c3e0101' }" (type Object) at path "_id" for model "Book"
+20230620	12:07:00	76c8acb5-47be-485f-a57c-3ed4ff3f20fd	CastError: Cast to ObjectId failed for value "{ id: '649179e9a3bf4ce59c3e0101' }" (type Object) at path "_id" for model "Book"
+20230620	12:07:19	09fb28c0-ae8d-4475-ae11-f1d4aab1b341	CastError: Cast to ObjectId failed for value "{ id: '649179e9a3bf4ce59c3e0101' }" (type Object) at path "_id" for model "Book"
+20230620	12:07:38	787b42a8-8034-456b-9956-be3173e0cf8b	CastError: Cast to ObjectId failed for value "{ id: '649179e9a3bf4ce59c3e0101' }" (type Object) at path "_id" for model "Book"
+20230620	12:07:55	791c23ed-eba4-4484-831a-931afd9e605a	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:08:32	35495d9d-0c13-4ab6-9f3e-b94c7679fbbf	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:09:09	5eafb1ed-3452-4e0f-8662-62e1ec932d9f	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:09:23	ce10775f-b9ab-4cf1-ba8f-b7a07335d6e4	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:10:43	c11ea636-2597-47c2-8e6c-1b700bb3f138	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:10:56	730ee890-0fff-49f4-9d1c-4b29244d6bec	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:11:17	a0b7d847-05fa-40cd-b57f-8a506f7e8b8b	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:11:33	b6028cd9-b665-4f6a-a57c-8c861b7bfb0c	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:11:53	7002fd26-24ce-46aa-bdb5-8d4e111e1019	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:12:04	9d958201-1c41-4e93-ab0f-2b3b67b85c3a	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:13:58	3d512c72-4a25-440b-b421-67b9c5ca3dd9	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:14:12	ca7ea38b-27b7-40ef-9856-a02b5450125c	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:14:13	ae18e733-972e-4eb8-8b1e-8251509529cc	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:14:30	0c30fcc1-e2da-4bc6-8e1c-ba92274e5c53	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:15:00	cc04849a-614e-4737-be31-47d44d8dbe3d	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:15:01	c47c7162-cc43-4055-83bd-19b1bc955f97	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:15:19	016ba751-c9ed-4660-8314-ebd3eb8a478a	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:16:04	67b7912d-1ee8-4f86-8e39-7d5c4531109a	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:16:30	b179b63d-8802-43a6-8596-068288bdb4a7	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:16:55	c605b0e5-dd92-4811-b198-effc89d27bde	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:17:26	5562554c-c26a-4984-b3bc-c83e2f253b45	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:17:37	6d320682-d524-4998-9358-cedeb92065b0	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:18:20	5a0f90c5-58a4-414a-a0f7-d5ea6d54eef9	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:18:48	58fc106a-45ce-4bb4-960f-4cf90ffa2464	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:19:07	0237164e-edc2-4c21-83a8-2956ef6407dd	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:19:29	7a41045e-b83d-4647-a19c-75d124f13b2c	ObjectParameterError: Parameter "filter" to findOne() must be an object, got "64917cf9ff65a60b6f6a187e" (type string)
+20230620	12:19:49	57f1a9bf-ca29-4028-ac0e-71eda124cd34	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:20:07	62628262-5b17-4f22-8ebf-3c35f97f9c28	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:21:30	6841c0f3-89c6-4b7c-9dba-d29431e84eb8	ObjectParameterError: Parameter "filter" to findOne() must be an object, got "64917cf9ff65a60b6f6a187e" (type string)
+20230620	12:22:01	8efadb08-3350-41c3-9188-19383b0a4fb7	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	12:22:33	75c5a3a9-c8f2-4bdb-b239-ccef6e247b83	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_writableState' -> object with constructor 'WritableState'
+    |     property 'afterWriteTickInfo' -> object with constructor 'Object'
+    --- property 'stream' closes the circle
+20230620	13:05:10	16255156-5186-433c-ade5-a91299d038ed	TypeError: book.remove is not a function
+20230620	13:06:22	3f8b654d-070e-44d2-b51d-f5426ff23795	TypeError: book.remove is not a function
+20230620	13:07:03	0de7c22f-2f72-49c9-b074-3ae66785b923	TypeError: book.remove is not a function
+20230621	14:04:48	412c04da-de00-4c76-8d22-20844854cfb4	CastError: Cast to ObjectId failed for value "{ _id: undefined, userId: '646139964e576ee5d2c37465' }" (type Object) at path "_id" for model "Book"
+20230621	14:05:06	d43a5ce1-9ca2-457a-ab39-ef36ddcbc538	CastError: Cast to ObjectId failed for value "{ _id: undefined, userId: '646139964e576ee5d2c37465' }" (type Object) at path "_id" for model "Book"
+20230621	14:06:02	71d6c949-9920-4736-864a-5f63b39b6da4	CastError: Cast to ObjectId failed for value "{ _id: undefined, userId: '646139964e576ee5d2c37465' }" (type Object) at path "_id" for model "Book"
+20230621	14:07:00	224cd739-9d87-4538-88df-84d0a682d922	CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "Book"
+20230621	15:19:02	dc9ca92c-ee7e-4ec2-a67e-b418844a2e0b	MongooseError: Model.prototype.deleteOne() no longer accepts a callback
+20230621	16:10:53	bc4909d1-ff66-4cbf-a476-bf442c77f8f0	CastError: Cast to ObjectId failed for value "649304984260206dccbf" (type string) at path "_id" for model "Book"
+20230623	13:36:24	9c4336ab-c907-42c0-b6bb-e7b856ba85cd	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Book"
+20230623	21:43:17	0f3883a7-bdc2-4ac5-a963-25feeb2cb0fc	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/4TUT/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	21:43:17	38e98eb5-f8b8-42a5-98a1-e151254c74df	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/4TUT/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	21:53:09	54342f59-e350-40e3-9c50-33eeda8989ae	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/4TUT/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	21:53:09	312be8bd-2cb6-4604-ae1a-ee7ad8025be0	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/4TUT/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	21:57:23	f5f53d66-2c91-4d87-967e-19eb872e4526	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	21:57:24	d7f29e55-0924-4840-a758-a6eb0840cfa0	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	21:57:56	bea82899-d2a8-41e0-81a5-8450ec59563d	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	21:57:56	8f4f2b85-b562-47fa-9bf2-a28c80f6a255	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	21:59:54	bd2e4d43-ada4-4ccc-b145-031878967ac5	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	22:00:11	dc8f8e13-46a8-495a-88e5-195abc2d7fb7	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	22:05:09	b28350fc-e3f2-43a9-ba35-781184e0a634	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	22:05:09	b6623b38-096d-41ca-9765-82d3ec51f69e	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	22:09:39	6e035ab8-559a-436d-ae92-d7217cb3268b	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	22:09:39	91051d09-b798-4c3e-be77-7962c8d85e0d	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687548747521-549783916.jpg'
+20230623	22:10:07	f5870749-a222-471e-a44c-5cf2ab4417b1	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687551007244-891545512.jpg'
+20230623	22:13:42	796af768-ed3c-4019-99a7-694c3c79721c	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687551007244-891545512.jpg'
+20230623	22:13:52	608767e8-fd48-4dd6-b488-a5abc352692d	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687551007244-891545512.jpg'
+20230623	22:13:52	40194c58-5472-44ff-8602-80cd00ee06e9	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687551007244-891545512.jpg'
+20230623	22:14:23	b0115284-d3a3-4467-a354-314639ca63e4	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687551007244-891545512.jpg'
+20230623	22:14:45	b09036d0-5073-4cca-aa10-f282259e333b	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687551284739-699151659.jpg'
+20230624	10:34:34	e80f6867-54bb-4e48-9245-90c0289231db	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687551284739-699151659.jpg'
+20230624	10:34:34	3c1978f5-9783-44ce-be68-c7fc17c5b313	Error: ENOENT: no such file or directory, stat '/home/ignite/Bureau/uploads/uploads/profileImage-1687551284739-699151659.jpg'
+20230624	23:20:22	8f41103e-fcc3-48e1-8956-4d09c72a555c	Error: not allowed by CORS
