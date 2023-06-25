@@ -1,7 +1,9 @@
 const User = require('../model/User');
+const Book = require('../model/Book')
 const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
+const { profile } = require('console');
 
 // ...
 
@@ -21,14 +23,6 @@ const deleteUser = async (req, res) => {
     res.json(result);
 }
 
-const getUser = async (req, res) => {
-    if (!req?.params?.id) return res.status(400).json({ "message": 'User ID required' });
-    const user = await User.findOne({ _id: req.params.id }).exec();
-    if (!user) {
-        return res.status(204).json({ 'message': `User ID ${req.params.id} not found` });
-    }
-    res.json(user);
-}
 
 
 const storage = multer.diskStorage({
@@ -70,6 +64,7 @@ const updateUserProfileImage = (req, res) => {
       if(!userToUpdate) return res.status(404).json({ error: 'Livre non trouvé' })
       const updatedUser = await userToUpdate.updateOne({profileImage});
       console.log(profileImage)
+
       res.status(201).json(profileImage); // Renvoyer le livre ajouté en réponse
       console.log('image ajouter')
     } catch (error) {
@@ -113,7 +108,44 @@ const searchUsers = async (req, res) => {
     res.status(500).json({ message: 'Failed to search users' });
   }
 };
+/* const getUser = async (req, res) => {
+  if (!req?.params?.id) return res.status(400).json({ "message": 'User ID required' });
+  const user = await User.findOne({ _id: req.params.id }).exec();
+  if (!user) {
+      return res.status(204).json({ 'message': `User ID ${req.params.id} not found` });
+  }
+  res.json(user);
+}
+ */
+const getUser = async (req,res) => {
 
+  try{
+    const {username} = req.params
+
+    if (!username) {
+      return res.status(400).json({ message: 'username est requis' });
+    }
+  
+    const user = await User.findOne({username})
+    const userId = user._id
+
+   const userBooks = await Book.find({userId})
+
+    const result = {
+      username,
+      profileImage: user.profileImage,
+      books: userBooks
+    }
+    console.log(result)
+    res.json(result)
+  }
+  catch (err) {
+    console.error(err)
+
+    res.status(500).json({ message: 'Une erreur est survenue lors de la récupération du profile' });
+
+  }
+}
 
 module.exports = {
   getAllUsers,

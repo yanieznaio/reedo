@@ -16,7 +16,7 @@ const Layout = () => {
 
       const response = await axios.get(`/users/search?q=${term}`);
       const data = response.data;
-      console.log(data)
+ 
       setSuggestions(data);
     } catch (error) {
       console.error(error);
@@ -25,7 +25,7 @@ const Layout = () => {
   return (
     <LayoutContainer>
        <FlexRowContainer>
-        <h1>REEDO</h1>
+        <StyledLink to="login">REEDO</StyledLink>
         
 
    
@@ -37,18 +37,15 @@ const Layout = () => {
         value={searchTerm}
         onChange={(e) => handleSearch(e.target.value)}
         placeholder="Search users..."
-        roundborder={suggestions.length === 0}
+        roundborder={suggestions.length === 0 ? 'true': 'false'}
       />
       {suggestions.length > 0 && searchTerm.length > 0 && (
         <Ul>
           {suggestions.map((user) => (
-            <Li key={user._id}>
-                <Img src={user.profileImage ? `http://localhost:3500/${user.profileImage}` : "https://i.pinimg.com/236x/eb/bb/b4/ebbbb41de744b5ee43107b25bd27c753.jpg"} ></Img>
-              {user.username}
-          
-            </Li>
-
-          ))}
+          <Li key={user._id}>
+            <Link to={`/profile/${user.username}`}><Img src={user.profileImage ? `http://localhost:3500/${user.profileImage}` : "https://static.vecteezy.com/ti/vecteur-libre/p3/5544718-profil-icone-design-vecteur-gratuit-vectoriel.jpg"}/>{user.username}</Link>
+          </Li>
+        ))}
         </Ul>
       )}
     </FormContainer>
@@ -63,6 +60,13 @@ export default Layout
 
 const LayoutContainer = styled.div`
  
+`
+
+const StyledLink = styled(Link)`
+text-decoration: none;
+color: black;
+font-size: 2rem;
+font-weight: 600;
 `
 
 const FormContainer = styled.form`
@@ -83,6 +87,7 @@ const Label = styled.label`
 const Input = styled.input`
   outline: none;
   border: none;
+  border-radius: 20px;
 
  background: rgb(255,255,255, 0.9);
   height: 2rem;

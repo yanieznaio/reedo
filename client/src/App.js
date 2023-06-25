@@ -5,6 +5,7 @@ import Login from './compenents/auth/Login';
 import Register from './compenents/auth/Register';
 import RequireAuth from './compenents/auth/RequireAuth';
 import UserHome from './compenents/Profile/UserHome';
+import UserProfile from './compenents/UserProfile';
 
 const ROLES = {
   'User': 2001,
@@ -20,7 +21,7 @@ function App() {
     
         <Route path='login' element={<Login/>}/>
         <Route path='register' element={<Register/>}/>
-
+        <Route path="profile/:username" element={<UserProfile/>} />
 
 
         {/* private route */}

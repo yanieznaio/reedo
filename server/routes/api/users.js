@@ -8,7 +8,7 @@ const verifyJWT = require('../../middleware/verifyJWT')
 
 router.get('/search', usersController.searchUsers); 
 router.get('/profile-image', verifyJWT, usersController.getUserProfileImage);
-
+router.get('/profile/:username', usersController.getUser)
 router.route('/')
     .get(verifyRoles(ROLES_LIST.User), usersController.getAllUsers)
     .delete(verifyRoles(ROLES_LIST.Admin), usersController.deleteUser);

@@ -115,7 +115,7 @@ const getAllBooks = (req, res, next) => {
   Book.find({ userId })
     .then(books => {
       console.log('getAllBooks ok')
-      console.log(books.imgUrl)
+   
       res.json(books);
     })
     .catch(error => {
