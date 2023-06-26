@@ -5,6 +5,8 @@ import BooksList from './BooksList'
 import { StateContext } from '../../../context/StateProvider'
 import BookListTable from './BookListTable'
 import ReviewsSection from './ReviewsSection'
+import {AiFillDelete} from 'react-icons/ai'
+import {BiBookAdd} from 'react-icons/bi'
 const BooksSection = () => {
     const {showForm , setShowForm, showBtnRemove, setShowBtnRemove} = useContext(StateContext)
     const [changeView, setChangeView] = useState(false)
@@ -24,18 +26,18 @@ const BooksSection = () => {
         <BtnBookByStatus onClick={() => handleStatusChange("to read")}>To Read</BtnBookByStatus>
         <BtnBookByStatus onClick={() => handleStatusChange("finish")}>Finish</BtnBookByStatus>
         <BtnBookByStatus onClick={() => handleStatusChange("reading")}>Reading</BtnBookByStatus>
-        <BtnBookByStatus onClick={() => setShowReviews(!showReviews)}>Reviews</BtnBookByStatus>
+  
       </NavBarContainer>
       <Container>
         <BtnWrap>
           <BtnChangeView onClick={() => setChangeView(!changeView)}>Change view</BtnChangeView>
-          <Btn onClick={() => setShowBtnRemove(!showBtnRemove)}>x</Btn>
-          <Btn onClick={() => setShowForm(!showForm)}>+</Btn>
+          <Btn onClick={() => setShowBtnRemove(!showBtnRemove)}><AiFillDelete/></Btn>
+          <Btn onClick={() => setShowForm(!showForm)}><BiBookAdd/></Btn>
         </BtnWrap>
         { showForm && <AddBookForm/>}
         {!showForm && changeView && !showReviews && <BooksList  selectedStatus={selectedStatus}/>}
         {!changeView && !showForm && !showReviews &&  <BookListTable selectedStatus={selectedStatus}/>}
-        {showReviews && !showForm  && <ReviewsSection/>}
+
       </Container>
     </div>
   )

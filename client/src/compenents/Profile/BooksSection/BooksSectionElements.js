@@ -3,7 +3,7 @@ import { styled } from "styled-components"
 export const Container = styled.div`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   width: 60%;
-  height: 500px;
+  height: 600px;
   background-color: white;
   border-radius: 20px;
   margin: auto;
@@ -35,14 +35,18 @@ export const Btn = styled.button`
 
   border: none;
   background: transparent;
-  font-size: 2rem;
+  font-size: 1.5rem;
+
+  color: #2C3639;
   border-radius:20px;
   text-align: center;
   cursor: pointer;
-  text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  opacity: 0.8;
+
+
   &:hover{
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+    opacity: 1;
   }
   
   
@@ -76,6 +80,7 @@ export const NavBarContainer = styled.div`
   border-radius: 20px;
   @media screen and (max-width: 900px){
     width: 90%;
+    margin-top: 10%;
   }
 
 

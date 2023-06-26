@@ -2,9 +2,9 @@ import React from 'react'
 import { styled } from 'styled-components'
 import EditBookForm from './Profile/BooksSection/EditBookForm'
 import {GrEdit} from 'react-icons/gr'
-
+import { useState } from 'react'
 const BookTable = (props) => {
-
+  const [editBook, setEditBook] = useState(false)
     const statuColor = {
         'finish': 'rgb(174, 226, 255, 0.5)',
         'to read': 'rgb(241, 225, 166, 0.5)',
@@ -25,11 +25,11 @@ const BookTable = (props) => {
       <Tbody>
         {props.books.map(book => (
           <Tr key={book._id} boxshadow={props.editBook === book._id}>
-            {props.editBook &&  props.editBook === book._id ?
+            {props.editBook && props.editBook=== book._id ?
             
-            <>
-              <EditBookForm id={book._id} currtitle={book.title} currauthor={book.author} currstatus={book.status} statusColor={props.statuColor} setEditBook={props.setEditBook}/>
-            </>
+            
+              <EditBookForm id={book._id} currtitle={book.title} currauthor={book.author} currstatus={book.status} statusColor={statuColor} setEditBook={props.setEditBook}/>
+            
             
             : 
             
@@ -58,7 +58,7 @@ const BookTable = (props) => {
 export default BookTable
 
 const TableContainer = styled.div`
-  height: 350px;
+  height: 450px;
   overflow-y: scroll;
   @media screen and (max-width: 900px){
     height: 800px;

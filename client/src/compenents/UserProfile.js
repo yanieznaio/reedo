@@ -37,7 +37,7 @@ const UserProfile = () => {
   return (
   <>
   <NavBarContainer>
-    <BtnBookByStatus>Profile</BtnBookByStatus>
+
     <BtnBookByStatus>Books</BtnBookByStatus>
   </NavBarContainer>
    <OtherUserContainer>
@@ -50,7 +50,7 @@ const UserProfile = () => {
     <Content>
  {    <div>
 
-      {userData.books ? (
+      {userData.books.length > 0 ? (
         <>
           <BtnWrap>
            <BtnChangeView onClick={() => setChangeView(!changeView)}>Change view</BtnChangeView>
@@ -60,7 +60,7 @@ const UserProfile = () => {
         </>
   
       ) : (
-        <p>No books found</p>
+        <Message>No books found</Message>
       )}
     </div> }
     </Content>
@@ -77,17 +77,18 @@ const OtherUserContainer = styled.div`
 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   width: 60%;
-  height: 500px;
+  height: 600px;
   background-color: white;
   border-radius: 20px;
   margin: auto;
   display: flex;
-
+  
 
 
   @media screen and (max-width: 900px){
     width: 90%;
-    height: 1000px;
+    height: 1500px;
+    flex-direction: column;
 
   }
 `
@@ -122,10 +123,29 @@ const OtherUserContainer = styled.div`
  `
 
  const Content = styled.div`
-  width: 80%;
+  width: 100%;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-  height: 100%;
+  height: 600px;
+
   margin: auto;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  @media screen and (max-width: 900px) {
+    height: 1500px
+  }
+ `
+
+ const Message = styled.p`
+  font-size: 1rem;
+  color: gray;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 40%;
+  height: 30%;
+  border-radius: 12px;
+  margin: 5rem auto;
+
+
+  
  `

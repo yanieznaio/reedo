@@ -1,15 +1,34 @@
 import { Link, Outlet, useLocation  } from "react-router-dom";
 import { useState, useEffect, } from "react";
 import { styled } from "styled-components";
-
+import useAuth from "../services/auth/hooks/useAuth";
 import { FlexRowContainer } from '../compenents/StyledElements/StyledContainers'
 import {BiSearch} from 'react-icons/bi'
+import { fetchProfileImage } from "../services/api/user";
 import axios from "../services/api/axios";
 const Layout = () => {
   const location = useLocation();
   const [searchTerm, setSearchTerm] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+  const [profileImage, setProfileImage] = useState(null);
+  const {auth} = useAuth()
 
+
+  const fetchImage = async() =>{
+    try {
+      const imgUrl = await fetchProfileImage(auth)
+  
+      setProfileImage(imgUrl)
+    }catch (err) {
+      console.error(err)
+    }
+   
+  }
+  useEffect(() => {
+
+    fetchImage()
+
+  }, [auth])
   const handleSearch = async (term) => {
     setSearchTerm(term);
 
@@ -38,8 +57,6 @@ const Layout = () => {
        <FlexRowContainer>
         <StyledLink to="/">REEDO</StyledLink>
         
-
-   
           
         <FormContainer>
       <Input
@@ -60,6 +77,12 @@ const Layout = () => {
         </Ul>
       )}
     </FormContainer>
+    {auth && profileImage &&(
+      <>
+      <Link to="/"><UserImage  src={`http://localhost:3500/${profileImage}`}></UserImage></Link>
+      </>
+    )
+    }
       </FlexRowContainer>
       <Outlet/>
     </LayoutContainer>
@@ -78,6 +101,7 @@ text-decoration: none;
 color: black;
 font-size: 2rem;
 font-weight: 600;
+
 `
 
 const UserLink = styled(Link)`
@@ -95,7 +119,9 @@ const UserLink = styled(Link)`
 
 `
 const FormContainer = styled.form`
-  margin-right: 10rem;
+    margin-right: 5rem;
+    margin-left: auto;
+
   position: relative;
 
 `
@@ -104,7 +130,7 @@ const FormContainer = styled.form`
 const Label = styled.label`
   position: absolute;
   cursor: text;
-  padding: 0.5rem;
+
   
 
 `
@@ -112,14 +138,18 @@ const Label = styled.label`
 const Input = styled.input`
   outline: none;
   border: none;
-  border-radius: 20px;
+  border-radius: 12px;
 
-  border-bottom-left-radius: ${props => props.roundborder === 'true'? '0px': '20px'};
-  border-bottom-right-radius: ${props => props.roundborder === 'true'? '0px': '20px'};
-  background: rgb(255,255,255, 0.9);
-  height: 2rem;
+  border-bottom-left-radius: ${props => props.roundborder === 'true'? '0px': '12px'};
+  border-bottom-right-radius: ${props => props.roundborder === 'true'? '0px': '12px'};
+  background:rgb(255,255,255);
+
+  
+  height: 2.5rem;
   width: 15rem;
+  &:hover{
 
+  }
   
 `
 const Ul = styled.ul`
@@ -159,4 +189,13 @@ const Img = styled.img`
   border-radius: 50%;
 
 
+`
+
+const UserImage = styled.img`
+
+  height: 3rem;
+  width: 3rem;
+  background-color: aliceblue;
+  border-radius: 50%;
+  cursor: pointer;
 `
