@@ -37,7 +37,7 @@ const BookContainer = styled.div`
   gap: 1rem;
   height: 450px;
   overflow-y: auto;
-    max-height: 70%;
+  max-height: 70%;
 
   @media screen and (max-width: 900px){
     grid-template-columns: repeat(2, 1fr);

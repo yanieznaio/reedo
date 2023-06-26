@@ -1,11 +1,12 @@
-import { Link, Outlet } from "react-router-dom";
-import { useState } from "react";
+import { Link, Outlet, useLocation  } from "react-router-dom";
+import { useState, useEffect, } from "react";
 import { styled } from "styled-components";
 
 import { FlexRowContainer } from '../compenents/StyledElements/StyledContainers'
 import {BiSearch} from 'react-icons/bi'
 import axios from "../services/api/axios";
 const Layout = () => {
+  const location = useLocation();
   const [searchTerm, setSearchTerm] = useState('');
   const [suggestions, setSuggestions] = useState([]);
 
@@ -22,10 +23,20 @@ const Layout = () => {
       console.error(error);
     }
   };
+
+  const resetSuggestions = () => {
+    setSuggestions([]);
+    setSearchTerm('')
+  };
+
+  useEffect(() => {
+    resetSuggestions();
+  }, [location]); // Réinitialiser les suggestions lorsque la location change
+
   return (
     <LayoutContainer>
        <FlexRowContainer>
-        <StyledLink to="login">REEDO</StyledLink>
+        <StyledLink to="/">REEDO</StyledLink>
         
 
    
@@ -37,13 +48,13 @@ const Layout = () => {
         value={searchTerm}
         onChange={(e) => handleSearch(e.target.value)}
         placeholder="Search users..."
-        roundborder={suggestions.length === 0 ? 'true': 'false'}
+        roundborder={suggestions.length > 0 && searchTerm.length > 0? 'true': 'false'}
       />
       {suggestions.length > 0 && searchTerm.length > 0 && (
         <Ul>
           {suggestions.map((user) => (
           <Li key={user._id}>
-            <Link to={`/profile/${user.username}`}><Img src={user.profileImage ? `http://localhost:3500/${user.profileImage}` : "https://static.vecteezy.com/ti/vecteur-libre/p3/5544718-profil-icone-design-vecteur-gratuit-vectoriel.jpg"}/>{user.username}</Link>
+            <UserLink to={`/profile/${user.username}`} onClick={resetSuggestions}><Img src={user.profileImage ? `http://localhost:3500/${user.profileImage}` : "https://static.vecteezy.com/ti/vecteur-libre/p3/5544718-profil-icone-design-vecteur-gratuit-vectoriel.jpg"}/>{user.username}</UserLink>
           </Li>
         ))}
         </Ul>
@@ -69,6 +80,20 @@ font-size: 2rem;
 font-weight: 600;
 `
 
+const UserLink = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: gray;
+  font-weight: 500;
+
+  &:hover{
+    color: black;
+  }
+
+
+`
 const FormContainer = styled.form`
   margin-right: 10rem;
   position: relative;
@@ -89,9 +114,12 @@ const Input = styled.input`
   border: none;
   border-radius: 20px;
 
- background: rgb(255,255,255, 0.9);
+  border-bottom-left-radius: ${props => props.roundborder === 'true'? '0px': '20px'};
+  border-bottom-right-radius: ${props => props.roundborder === 'true'? '0px': '20px'};
+  background: rgb(255,255,255, 0.9);
   height: 2rem;
   width: 15rem;
+
   
 `
 const Ul = styled.ul`

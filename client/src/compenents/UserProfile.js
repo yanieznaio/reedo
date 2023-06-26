@@ -4,12 +4,13 @@ import { styled } from 'styled-components';
 import axios from '../services/api/axios';
 import { BtnBookByStatus, NavBarContainer } from './Profile/BooksSection/BooksSectionElements';
 import BookGrid from './BookGrid';
-
+import { BtnWrap,BtnChangeView } from './Profile/BooksSection/BooksSectionElements';
+import BookTable from './BookTable';
 
 const UserProfile = () => {
   const { username } = useParams();
   const [userData, setUserData] = useState(null);
-
+  const [changeView, setChangeView] = useState(false)
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -36,26 +37,28 @@ const UserProfile = () => {
   return (
   <>
   <NavBarContainer>
-  <BtnBookByStatus>Profile</BtnBookByStatus>
-  <BtnBookByStatus>Books</BtnBookByStatus>
-
-
+    <BtnBookByStatus>Profile</BtnBookByStatus>
+    <BtnBookByStatus>Books</BtnBookByStatus>
   </NavBarContainer>
    <OtherUserContainer>
     <Head>
       <Info>
-      <UserImg src={userData.profileImage ? `http://localhost:3500/${userData.profileImage}` : "https://as1.ftcdn.net/v2/jpg/00/64/67/52/1000_F_64675209_7ve2XQANuzuHjMZXP3aIYIpsDKEbF5dD.jpg"}/>
-      <Username>{userData.username}</Username>
-
+        <UserImg src={userData.profileImage ? `http://localhost:3500/${userData.profileImage}` : "https://as1.ftcdn.net/v2/jpg/00/64/67/52/1000_F_64675209_7ve2XQANuzuHjMZXP3aIYIpsDKEbF5dD.jpg"}/>
+        <Username>{userData.username}</Username>
       </Info>
-
-
     </Head>
     <Content>
  {    <div>
 
       {userData.books ? (
-        <BookGrid books={userData.books}/>
+        <>
+          <BtnWrap>
+           <BtnChangeView onClick={() => setChangeView(!changeView)}>Change view</BtnChangeView>
+          </BtnWrap>
+         {!changeView && <BookGrid books={userData.books}/>}
+         {changeView && <BookTable books={userData.books} />}
+        </>
+  
       ) : (
         <p>No books found</p>
       )}

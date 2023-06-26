@@ -1,6 +1,6 @@
 import React, { useContext,useState , useEffect} from 'react'
 import AuthContext from '../../context/AuthProvider'
-import {  useNavigate } from 'react-router-dom'
+import {  Link, useNavigate } from 'react-router-dom'
 import BooksSection from './BooksSection/BooksSection'
 import { styled } from 'styled-components'
 
@@ -48,7 +48,7 @@ const UserHome = () => {
       </>
       }
       </SettingsContainer>
-      <ProfilImg  src={`http://localhost:3500/${profileImage}`}></ProfilImg>
+      <Link to="/"><ProfilImg  src={`http://localhost:3500/${profileImage}`}></ProfilImg></Link>
      { showProfileSettings && <ProfileSettings></ProfileSettings>}
 
       {!showProfileSettings && <BooksSection></BooksSection>}
