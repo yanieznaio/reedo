@@ -1,24 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { styled } from 'styled-components';
 import axios from '../services/api/axios';
 import { BtnBookByStatus, NavBarContainer } from './Profile/BooksSection/BooksSectionElements';
 import BookGrid from './BookGrid';
 import { BtnWrap,BtnChangeView } from './Profile/BooksSection/BooksSectionElements';
 import BookTable from './BookTable';
-
+import {AiOutlineHome} from 'react-icons/ai'
+import useAuth from '../services/auth/hooks/useAuth';
 const UserProfile = () => {
+  const {auth} = useAuth()
   const { username } = useParams();
   const [userData, setUserData] = useState(null);
   const [changeView, setChangeView] = useState(false)
-
+  const [selectedStatus, setSelectedStatus] = useState(null);
   useEffect(() => {
     const fetchUserData = async () => {
       try {
         // Effectuez une requête pour récupérer les informations du profil de l'utilisateur à l'aide du nom d'utilisateur
         const response = await axios.get(`/users/profile/${username}`);
         const userData = response.data;
-        console.log(userData.boo)
+  
         setUserData(userData);
       } catch (error) {
         console.error(error);
@@ -28,7 +30,10 @@ const UserProfile = () => {
     fetchUserData();
   }, [username]);
 
-
+  const handleStatusChange = async (status) => {
+    setSelectedStatus(status);
+  
+  };
   if (!userData) {
     return <div>Loading...</div>;
   }
@@ -36,9 +41,15 @@ const UserProfile = () => {
 
   return (
   <>
+  {auth &&  <HomeLink to='/'><AiOutlineHome/></HomeLink>}
   <NavBarContainer>
 
-    <BtnBookByStatus>Books</BtnBookByStatus>
+   
+    <BtnBookByStatus onClick={() => handleStatusChange(null)}>All</BtnBookByStatus>
+        <BtnBookByStatus onClick={() => handleStatusChange("to read")}>To Read</BtnBookByStatus>
+        <BtnBookByStatus onClick={() => handleStatusChange("finish")}>Finish</BtnBookByStatus>
+        <BtnBookByStatus onClick={() => handleStatusChange("reading")}>Reading</BtnBookByStatus>
+  
   </NavBarContainer>
    <OtherUserContainer>
     <Head>
@@ -50,13 +61,14 @@ const UserProfile = () => {
     <Content>
  {    <div>
 
+
       {userData.books.length > 0 ? (
         <>
           <BtnWrap>
            <BtnChangeView onClick={() => setChangeView(!changeView)}>Change view</BtnChangeView>
           </BtnWrap>
-         {!changeView && <BookGrid books={userData.books}/>}
-         {changeView && <BookTable books={userData.books} />}
+         {!changeView && <BookGrid books={userData.books} selectedStatus={selectedStatus}/>}
+         {changeView && <BookTable books={userData.books} selectedStatus={selectedStatus}/>}
         </>
   
       ) : (
@@ -73,6 +85,26 @@ const UserProfile = () => {
 export default UserProfile;
 
 
+const HomeLink = styled(Link)`
+
+background: transparent;
+ position: absolute;
+top: 1rem;
+right: 5rem;
+ color:  rgb(127, 132, 135);
+ font-size: 2rem;
+ border: 1px solid  rgb(127, 132, 135, 0.3);
+ cursor: pointer;
+ border-radius: 12px;
+ width: 3rem;
+ height: 3rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ &:hover{
+   background: rgb(255,255,255, 0.2);
+ }
+`
 const OtherUserContainer = styled.div`
 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;

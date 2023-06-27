@@ -11,6 +11,10 @@ const BookTable = (props) => {
         'reading': 'rgb(254, 222, 255, 0.5)'
     }
 
+    const displayBooks = props.selectedStatus !== null
+    ? props.books.filter(book => book.status === props.selectedStatus)
+    : props.books;
+
   return (
     <TableContainer>
 
@@ -23,8 +27,8 @@ const BookTable = (props) => {
         </Tr>
       </Thead>
       <Tbody>
-        {props.books.map(book => (
-          <Tr key={book._id} boxshadow={props.editBook === book._id}>
+        {displayBooks.map(book => (
+          <Tr key={book._id} boxshadow={props.editBook === book._id ? 'true' : ''}>
             {props.editBook && props.editBook=== book._id ?
             
             
@@ -90,7 +94,7 @@ const Tbody = styled.tbody`
 
 const Tr = styled.tr`
     border-bottom: 1px solid #dddddd;
-    box-shadow:${props => props.boxshadow ?  'rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;': 'none'};
+    box-shadow:${props => props.boxshadow === 'true' ?  'rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;': 'none'};
     transition: all 250ms ease-in-out;
 
 `

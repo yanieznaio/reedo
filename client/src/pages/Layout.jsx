@@ -6,27 +6,34 @@ import { FlexRowContainer } from '../compenents/StyledElements/StyledContainers'
 import {BiSearch} from 'react-icons/bi'
 import { fetchProfileImage } from "../services/api/user";
 import axios from "../services/api/axios";
+import {RiUserSearchLine} from 'react-icons/ri'
 const Layout = () => {
   const location = useLocation();
   const [searchTerm, setSearchTerm] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [profileImage, setProfileImage] = useState(null);
+  const [showInputSearch, setShowInputSearch] = useState(false)
   const {auth} = useAuth()
 
 
   const fetchImage = async() =>{
-    try {
-      const imgUrl = await fetchProfileImage(auth)
-  
-      setProfileImage(imgUrl)
-    }catch (err) {
-      console.error(err)
-    }
+ 
+      try {
+        const imgUrl = await fetchProfileImage(auth)
+    
+        setProfileImage(imgUrl)
+      }catch (err) {
+        console.error(err)
+      }
+    
+
    
   }
   useEffect(() => {
-
-    fetchImage()
+    if(Object.keys(auth).length !== 0){
+      fetchImage()
+    }
+ 
 
   }, [auth])
   const handleSearch = async (term) => {
@@ -50,15 +57,23 @@ const Layout = () => {
 
   useEffect(() => {
     resetSuggestions();
+    setShowInputSearch(false)
   }, [location]); // Réinitialiser les suggestions lorsque la location change
 
+  const handleClick=(e) => {
+    e.preventDefault()
+    setShowInputSearch(true)
+  }
   return (
     <LayoutContainer>
        <FlexRowContainer>
         <StyledLink to="/">REEDO</StyledLink>
         
-          
+        
+
         <FormContainer>
+      <SearchBtn onClick={(e) => handleClick(e)} display={showInputSearch? 'none' : 'block'}><RiUserSearchLine/></SearchBtn>
+        
       <Input
 
         type="text"
@@ -66,6 +81,7 @@ const Layout = () => {
         onChange={(e) => handleSearch(e.target.value)}
         placeholder="Search users..."
         roundborder={suggestions.length > 0 && searchTerm.length > 0? 'true': 'false'}
+        display={showInputSearch? 'block' : 'none'}
       />
       {suggestions.length > 0 && searchTerm.length > 0 && (
         <Ul>
@@ -125,7 +141,29 @@ const FormContainer = styled.form`
   position: relative;
 
 `
+const SearchBtn = styled.button`
+  
+  background: transparent;
 
+
+ color:  rgb(127, 132, 135);
+ font-size: 2rem;
+ border: 1px solid  rgb(127, 132, 135, 0.3);
+ cursor: pointer;
+ border-radius: 12px;
+ width: 3rem;
+ height: 3rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ display: none;
+ &:hover{
+   background: rgb(255,255,255, 0.2);
+ }
+ @media screen and (max-width: 900px){
+    display: ${props => props.display };
+  }
+`
 
 const Label = styled.label`
   position: absolute;
@@ -147,8 +185,8 @@ const Input = styled.input`
   
   height: 2.5rem;
   width: 15rem;
-  &:hover{
-
+  @media screen and (max-width: 900px){
+    display: ${props => props.display};
   }
   
 `

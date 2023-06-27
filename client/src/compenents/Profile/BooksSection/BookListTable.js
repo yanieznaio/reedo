@@ -24,9 +24,6 @@ const BookListTable = ({selectedStatus}) => {
   }, [auth, editBook]);
 
 
-  const displayBooks = selectedStatus !== null
-  ? books.filter(book => book.status === selectedStatus)
-  : books;
 
 
   const handleClick = (bookId) => {
@@ -35,7 +32,7 @@ const BookListTable = ({selectedStatus}) => {
 
   
   return (
-    <BookTable books={displayBooks} handleClick={handleClick} setEditBook={setEditBook} editBook={editBook}/>
+    <BookTable books={books} selectedStatus={selectedStatus} handleClick={handleClick} setEditBook={setEditBook} editBook={editBook}/>
   )
 }
 

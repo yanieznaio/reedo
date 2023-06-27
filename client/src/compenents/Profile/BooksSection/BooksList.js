@@ -37,13 +37,11 @@ const BooksList = ({selectedStatus}) => {
       }
   }
 
-  const displayBooks = selectedStatus !== null
-  ? books.filter(book => book.status === selectedStatus)
-  : books;
+ 
 
  
   return (
-    <BookGrid books={displayBooks} handleRemove={handleRemove}/>
+    <BookGrid books={books} selectedStatus={selectedStatus} handleRemove={handleRemove}/>
   )
 }
 

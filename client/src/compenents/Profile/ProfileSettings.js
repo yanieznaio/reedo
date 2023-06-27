@@ -62,7 +62,7 @@ const ProfileSettings = () => {
       <Profile>
             <p>Profile Picture</p>
               <ProfileImg src={`http://localhost:3500/${profileImage}`} />
-              <Label for="file-upload" class="custom-file-upload">
+              <Label htmlFor="file-upload" className="custom-file-upload">
                 Change Image
             </Label>
           <FileInput id="file-upload" type="file" accept="image/*" onChange={handleImageUpload} />

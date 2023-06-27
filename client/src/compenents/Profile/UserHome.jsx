@@ -4,7 +4,7 @@ import {  Link, useNavigate, useLocation } from 'react-router-dom'
 import BooksSection from './BooksSection/BooksSection'
 import { styled } from 'styled-components'
 import {MdPowerSettingsNew} from 'react-icons/md'
-import {AiFillSetting} from 'react-icons/ai'
+import {AiFillSetting, AiOutlineHome}  from 'react-icons/ai'
 import {LiaUserCogSolid} from 'react-icons/lia'
 import { fetchProfileImage } from '../../services/api/user'
 import ProfileSettings from './ProfileSettings'
@@ -14,7 +14,7 @@ const UserHome = () => {
     const {auth} = useAuth()
     const navigate = useNavigate()
     const location = useLocation();
-    const [setProfileImage] = useState(null);
+
     const [showSettings, setShowSettings] = useState(false);
     const [showProfileSettings, setShowProfileSettings] = useState(false)
     const logout = () => {
@@ -23,30 +23,17 @@ const UserHome = () => {
     }
 
 
-    const fetchImage = async() =>{
-      try {
-        const imgUrl = await fetchProfileImage(auth)
-    
-        setProfileImage(imgUrl)
-      }catch (err) {
-        console.error(err)
-      }
-     
-    }
-    useEffect(() => {
 
-      fetchImage()
-  
-    }, [])
+
   return (
 
     <div>
-      <SettingsContainer showSettings={showSettings}>
+      <SettingsContainer showsettings={showSettings ? 'true' : ''}>
       <Button onClick={() => setShowSettings(!showSettings)}><AiFillSetting/></Button> 
       { showSettings && 
       <>
       <SettingsButton onClick={logout}><MdPowerSettingsNew/></SettingsButton> 
-      <SettingsButton onClick={() => setShowProfileSettings(!showProfileSettings)} ><LiaUserCogSolid/></SettingsButton> 
+      <SettingsButton onClick={() => {setShowProfileSettings(!showProfileSettings); setShowSettings(!showSettings)}} >{showProfileSettings ? <AiOutlineHome/>  : <LiaUserCogSolid/>}</SettingsButton> 
       </>
       }
       </SettingsContainer>
@@ -95,7 +82,7 @@ const SettingsContainer = styled.div`
 
   border-radius: 12px;
 
-  box-shadow: ${props => props.showSettings ? 'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset': 'none'};
+  box-shadow: ${props => props.showsettings = 'true' ? 'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset': 'none'};
   transition: all 0.2s ease-in;
 `
 const SettingsButton = styled(Button)`

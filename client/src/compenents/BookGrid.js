@@ -6,13 +6,15 @@ import { StateContext } from '../context/StateProvider'
 const BookGrid = (props) => {
 
     const {showBtnRemove} = useContext(StateContext)
-
+    const displayBooks = props.selectedStatus !== null
+    ? props.books.filter(book => book.status === props.selectedStatus)
+    : props.books;
     return (
         <>
 
         <BookContainer>
 
-            {props.books.map(book => (
+            {displayBooks.map(book => (
             <BookCard key={book._id}>
             {showBtnRemove && <BtnDelete onClick={() => props.handleRemove(book._id)}><AiFillDelete/></BtnDelete>} 
             <BookImg src={`http://localhost:3500/${book.imgUrl}`}/>
